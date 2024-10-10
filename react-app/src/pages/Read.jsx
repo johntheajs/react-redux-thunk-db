@@ -88,7 +88,7 @@ function Read() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            ReactJs CRUD App With React Redux Thunk
+            User Management System
           </Typography>
         </Toolbar>
       </AppBar>
