@@ -64,7 +64,7 @@ function Read() {
   }, []);
 
   useEffect(() => {
-    console.log('loading', loading)
+    // console.log('loading', loading)
     if (!loading) {
       setOpen(loading);
     }
@@ -88,7 +88,7 @@ function Read() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            User Management System
+            Customer Management System
           </Typography>
         </Toolbar>
       </AppBar>
@@ -99,7 +99,7 @@ function Read() {
           className={classes.button}
           startIcon={<AddIcon />}
         >
-          Create User
+          Create Customer
         </Button>
       </Link>
       <TableContainer component={Paper}>

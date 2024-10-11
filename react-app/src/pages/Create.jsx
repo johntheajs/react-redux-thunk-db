@@ -39,6 +39,17 @@ function Create() {
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
 
+  useEffect(()=>{
+    console.log("Component mounted");
+    return () => {
+      console.log('Component unmounted');
+    };
+  },[])
+
+  useEffect(()=>{
+    console.log("Component Updated");
+  },[handleChange])
+
   useEffect(() => {
     handleValidate(inputs);
   }, [inputs]);
@@ -53,6 +64,9 @@ function Create() {
     setSubmitted(true);
     if (handleValidate(inputs)) {
       dispatch(createUser(inputs, history));
+    }
+    else{
+      console.log(errors);
     }
   }
 
@@ -77,7 +91,7 @@ function Create() {
 
   return (
     <React.Fragment>
-      <h1 style={{ textAlign: "center" }}>Create User</h1>
+      <h1 style={{ textAlign: "center" }}>Create Customer</h1>
       <form
         className={classes.root}
         style={{

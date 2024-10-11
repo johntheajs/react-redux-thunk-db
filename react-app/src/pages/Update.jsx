@@ -66,7 +66,7 @@ function Update() {
 
   return (
     <React.Fragment>
-      <h1 style={{ textAlign: "center" }}>Update User</h1>
+      <h1 style={{ textAlign: "center" }}>Update Customer</h1>
       <form
         className={classes.root}
         style={{
